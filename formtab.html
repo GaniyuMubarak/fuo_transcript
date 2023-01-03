@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Metadata-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Styles-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <style>
+        input.invalid {
+            background-color: #ffdddd;
+        }
+
+        /* Hide all steps by default: */
+        .tab {
+            display: none;
+        }
+
+        /* Make circles that indicate the steps of the form: */
+        .step {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbbbbb;
+            border: none;
+            border-radius: 50%;
+            display: inline-block;
+            opacity: 0.5;
+        }
+
+        /* Mark the active step: */
+        .step.active {
+            opacity: 1;
+        }
+
+        /* Mark the steps that are finished and valid: */
+        .step.finish {
+            background-color: Purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <!--This div will have the tab value for the class for the first section-->
+        <div class="tab">
+            <input type="text">
+        </div>
+        <!--This div will have the tab value for the class for the second section-->
+        <div class="tab">
+            <input type="text">
+        </div>
+        <!--This div will have the tab value for the class for the third section-->
+        <div class="tab">
+            <input type="text">
+        </div>
+        <button type="submit" name="click">Submit</button>
+        <!-- This is the settings for the next and prev button from one section to the other -->
+        <div style="overflow: auto;">
+            <div class="text-center m-3">
+                <button class="btn btn-info"
+                    style="background: linear-gradient(to left, rgba(196, 220, 228, 0.99), rgba(230, 202, 230, 0.99));"
+                    type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button class="btn btn-info"
+                    style="background: linear-gradient(to left, rgba(196, 220, 228, 0.99), rgba(230, 202, 230, 0.99));"
+                    type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            </div>
+        </div>
+
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+    </form>
+    
+    
+
+        <!--JavaScripts-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/all.min.js"></script>
+        <script src="js/fontawesome.min.js"></script>
+        <script src="js/formtabs.js"></script>
+        <script src="js/jquery.js"></script>
+
+</body>
+
+</html>
